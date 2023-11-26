@@ -17,9 +17,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Show files
-        run: ls -R
-
       - name: Setup python
         uses: actions/setup-python@v4
         with:
@@ -31,14 +28,12 @@ jobs:
       - name: Install poetry
         run: pip install poetry
 
-      - name: Change path
-        run: cd python-lib
-
-      - name: Show files
-        run: ls -R
-
       - name: Install lib
-        run: poetry install
+        run: |
+          cd python-lib
+          poetry install
 
       - name: Run pytest
-        run: poetry run pytest
+        run: |
+          cd python-ib
+          poetry run pytest
