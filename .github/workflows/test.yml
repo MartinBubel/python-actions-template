@@ -14,6 +14,9 @@ jobs:
   run-pytest-linux:
     runs-on: ubuntu-latest  # windows-latest, macos-latest
     steps:
+      - name: Show files
+        uses: ls -lt
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -30,6 +33,9 @@ jobs:
 
       - name: Change path
         run: cd python-lib
+
+      - name: Show files
+        run: ls -lt
 
       - name: Install lib
         run: poetry install
