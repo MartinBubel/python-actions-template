@@ -35,7 +35,7 @@ jobs:
         run: pip install poetry
 
       - name: Change path
-        run: cd python-lib
+        run: cd python-lib/python-lib
 
       - name: Show files
         run: ls -la
