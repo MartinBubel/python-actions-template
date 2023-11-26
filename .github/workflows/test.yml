@@ -35,5 +35,5 @@ jobs:
 
       - name: Run pytest
         run: |
-          cd python-ib
+          cd python-lib
           poetry run pytest
