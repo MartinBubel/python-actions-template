@@ -20,11 +20,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Find file
-        run: find f -type f -iname pyproject.toml 
-
       - name: Show files
-        run: ls -la
+        run: ls -R
 
       - name: Setup python
         uses: actions/setup-python@v4
