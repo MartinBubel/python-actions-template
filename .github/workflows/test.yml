@@ -14,9 +14,6 @@ jobs:
   run-pytest-linux:
     runs-on: ubuntu-latest  # windows-latest, macos-latest
     steps:
-      - name: Show files
-        run: ls -lt
-
       - name: Checkout
         run: actions/checkout@v4
 
