@@ -14,8 +14,11 @@ jobs:
   run-pytest-linux:
     runs-on: ubuntu-latest  # windows-latest, macos-latest
     steps:
+      - name: Show files
+        run: ls -lt
+
       - name: Checkout
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Setup python
         uses: actions/setup-python@v4
